@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title></title>
+
+		<script src="game.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+
+	</head>
+
+	<body onload="startingGame()">
+		<div class="score-bar">
+			<table style="width: 140px;">
+				<tr border="1";edd>
+					<td>
+						<img src="img/balao_azul_grande.png">
+					</td>
+					<td style="text-align: center;">
+						<span id="numBalloons" style="font-size: 30px; color: red;"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="img/balao_azul_grande_estourado.png">
+					</td>
+					<td>
+						<span id="blownBalloons" style="font-size:30px; color: red;"></span>
+					</td>
+				</tr>
+			</table>
+			<table border="1" style="width: 140px ;height: 132px;">
+				<tr>
+					<td style="background: url('img/cronometro.png');text-align: center;"><span id="playngTime" style="font-size: 30px; color: red;"></span></td>
+				</tr>
+			</table>
+		</div>
+		<div id="scenario"></div>
+	</body>
+	
+</html>

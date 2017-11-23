@@ -1,0 +1,52 @@
+.menu-box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	background: #DFDFDF;
+	text-align: center;
+	color: black;
+	border-radius: 15px;
+	border: 1px solid black;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+	margin-left: -100px;
+	margin-top: -100px;
+	
+}
+
+.menu-main{
+	position: relative;	
+	border: 1px solid red;
+	width: 550px;
+	height: 550px;
+	background: #91B22C;
+	border-radius: 15px;
+	border: 2px solid white;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+
+#scenario{
+	border: 1px solid black;
+	background: url('img/cenario.png');
+	width: 600px; 
+	height: 500px;
+	background-position: center;
+	border-radius: 0 15px 15px 0;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+
+}
+
+
+.score-bar{
+	float: left;
+	width: auto;
+	height: 500px;
+	background: #FFF;
+	border: 1px solid black;
+}
+
+body{
+	background-color: #919EAC;
+}
+
