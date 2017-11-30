@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Jogo da velha</title>
+
+		<script src="jquery-2.2.1.js"></script>
+		<script type="text/javascript" src="game.js"></script>
+
+	</head>
+
+	<body>
+	
+		<div id="main" align="center">
+			<table  width="600px">
+				<tbody>
+					<tr>
+						<td colspan="3" align="center" ><h1>Jogo da Velha</h1></td>
+					</tr>
+
+					<tr>
+						<td align="center" >
+							<img src="img/jogador_1.png">
+							<br/>
+							<input id="input_player1" type="text" placeholder="Digite o Nome do Jogador 1">	
+						</td>
+
+						<td align="center">
+							<img id="start_icon" src="img/iniciar.png">
+						</td>
+
+						<td align="center">
+							<img src="img/jogador_2.png">
+							<br/>
+							<input id="input_player2" type="text" placeholder="Digite o Nome do Jogador 2">
+
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+
+		<div id="board" style="text-align: center; display: none;">
+
+			<div style="display: inline-block;">
+				<img src="img/jogador_1.png">
+				<br/>
+				<span id="player1_name"></span>
+			</div>
+
+
+
+			<div style="display: inline-block;">
+				<table>
+					<tbody>
+						<tr>
+							<td style=" border-right: 2px solid red; border-bottom: 2px solid red;">
+								<div class="played" id="a-1" style="width: 120px; height: 120px;"></div>
+							</td>
+
+							<td style=" border-right: 2px solid red;border-bottom: 2px solid red;">
+								<div class="played" id="a-2" style="width: 120px; height: 120px;"></div>
+							</td>
+
+							<td style="border-bottom: 2px solid red;">
+								<div class="played" id="a-3" style="width: 120px; height: 120px;"></div>
+							</td>
+
+						</tr >
+
+						<tr>
+							<td style=" border-right: 2px solid red;border-bottom: 2px solid red;">
+								<div class="played" id="b-1" style="width: 120px; height: 120px;"></div>
+							</td>
+
+							<td style=" border-right: 2px solid red;border-bottom: 2px solid red;">
+								<div class="played" id="b-2" style="width: 120px; height: 120px;"></div>
+							</td>
+
+							<td style="border-bottom: 2px solid red;">
+								<div class="played" id="b-3" style="width: 120px; height: 120px;"></div>
+							</td>
+						</tr>
+
+						<tr>
+							<td style=" border-right: 2px solid red;">
+								<div class="played" id="c-1" style="width: 120px; height: 120px;"></div>
+							</td>
+
+							<td style=" border-right: 2px solid red;">
+								<div class="played" id="c-2" style="width: 120px; height: 120px;"></div>
+							</td>
+
+							<td>
+								<div class="played" id="c-3" style="width: 120px; height: 120px;"></div>
+							</td>
+						</tr>
+
+
+					</tbody>
+				</table>
+			</div>
+
+
+
+			<div style="display: inline-block;">
+				<img src="img/jogador_2.png">
+				<br/>
+				<span id="player2_name"></span>
+			</div>
+			
+		</div>
+
+	</body>
+</html>
