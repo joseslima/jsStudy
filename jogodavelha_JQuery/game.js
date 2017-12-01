@@ -1,7 +1,8 @@
 var round= 1;
+var global_mat = [[0,0,0],[0,0,0],[0,0,0]];
+
 
 $(document).ready(function(){
-
 
 	$("#start_icon").click(function(){
 
@@ -21,21 +22,48 @@ $(document).ready(function(){
 
 
 	$(".played").click(function(){
-		played(this.id);
+		var flag= checkMat(this.id[0],this.id[2]);
+		
+		console.log(flag);
+		if (flag== true){
+			played(this.id);
+		}else{
+			alert("Não Pode");
+			return false;
+		}
+		
 	})
 
 	function played(id){
+		var score= 0;
+		var icone= '';
 
 		if( (round % 2) == 0){
-			//player2
-			alert("Vez do player 2");
+			score= -1;
+			global_mat[parseInt(id[0])][parseInt(id[2])] = score;
+			icone= 'url(img/marcacao_2.png)';
 		}else{
-			//player1
-			alert("Vez do player1");
+			score= 1;
+			global_mat[parseInt(id[0])][parseInt(id[2])] = score;
+			icone= 'url(img/marcacao_1.png)';
 		}
 
 		round++;
+		$("#"+id).css("background",icone);
+		checkGame();
 
+
+	}
+
+	function checkMat(line,col){
+		if ((global_mat[line][col]) == 0){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+	function checkGame(){
 	}
 
 
