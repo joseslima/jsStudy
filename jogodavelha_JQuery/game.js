@@ -27,8 +27,10 @@ $(document).ready(function(){
 	function played(id){
 
 		if( (round % 2) == 0){
+			//
 			alert("Vez do player 2");
 		}else{
+			//
 			alert("Vez do player1");
 		}
 
