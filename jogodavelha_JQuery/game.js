@@ -27,10 +27,10 @@ $(document).ready(function(){
 	function played(id){
 
 		if( (round % 2) == 0){
-			//
+			//player2
 			alert("Vez do player 2");
 		}else{
-			//
+			//player1
 			alert("Vez do player1");
 		}
 
