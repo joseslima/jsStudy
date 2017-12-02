@@ -1,7 +1,6 @@
 var round= 1;
 var global_mat = [[0,0,0],[0,0,0],[0,0,0]];
 
-
 $(document).ready(function(){
 
 	$("#start_icon").click(function(){
@@ -53,8 +52,6 @@ $(document).ready(function(){
 
 		console.log(global_mat);
 		checkGame();
-
-
 	}
 
 	function checkMat(line,col){
@@ -78,7 +75,7 @@ $(document).ready(function(){
 			}
 
 		}else{
-			aux = checkLine();
+			aux = checkLines();
 			if (aux != 0){
 
 				if (aux == 3){
@@ -92,8 +89,19 @@ $(document).ready(function(){
 		}
 	}
 
-	function checkLine(){
-		return 0;
+	function checkLines(){
+		var aux= 0;
+		for (var i = 0; i < global_mat.length; i++) {
+			for (var j = 0; j < global_mat.length; j++) {
+				aux+= global_mat[i][j];
+			}
+			if ((aux==3) || (aux==-3)){
+				return aux;
+			}
+			aux = 0;
+		}
+
+		return aux;
 	}
 
 
