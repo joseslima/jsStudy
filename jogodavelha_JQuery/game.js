@@ -50,6 +50,8 @@ $(document).ready(function(){
 
 		round++;
 		$("#"+id).css("background",icone);
+
+		console.log(global_mat);
 		checkGame();
 
 
@@ -64,7 +66,47 @@ $(document).ready(function(){
 	}
 
 	function checkGame(){
+		var aux= 0;
+		aux= checkDiag();
+		
+		if (aux != 0){
+
+			if(aux == 3){
+				alert("1 ganhou");
+			}else{
+				alert("2 ganhou")
+			}
+
+		}else{
+			aux = checkLine();
+			if (aux != 0){
+
+				if (aux == 3){
+					alert("1 ganhou");
+				}else{
+					alert("2 ganhou");
+				}
+			}
+
+
+		}
+	}
+
+	function checkLine(){
+		return 0;
 	}
 
 
+
+	function checkDiag(){
+		if (  (global_mat[0][0] + global_mat[1][1] + global_mat[2][2]) == 3 || (global_mat[0][2] + global_mat[1][1] + global_mat[2][0]) == 3 ) {
+			return 3;
+		}else{
+			if ((  (global_mat[0][0] + global_mat[1][1] + global_mat[2][2]) == -3  || (global_mat[0][2] + global_mat[1][1] + global_mat[2][0]) == -3 )){
+				return -1;
+			}else{
+				return 0;
+			}
+		}
+	}
 })
